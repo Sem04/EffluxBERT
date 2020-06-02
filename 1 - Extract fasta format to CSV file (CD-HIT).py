@@ -88,18 +88,17 @@ df = df.reset_index(drop=True)
 df = df.loc[df['length'] >= 50]
 #print(df.loc[df['length'] >= 50])
 
-# For Seven human coronaviruses
-# Data1: Human coronavirus 229E, taxid:11137 (HCoV-229E) (1007 proteins)
+# Data1: efflux
 data_num_1 = df.loc[(df['data'] == 'mfs') | (df['data'] == 'smr') | (df['data'] == 'mate') | (df['data'] == 'rnd') | (df['data'] == 'abc')]
 data_num_1.to_csv (dir_path+'Data1 - efflux proteins [converted 30%].csv', index = None, header=True) # Don't forget to add '.csv' at the end of the path
 
-# Data2: Human coronavirus HKU1 (HCoV-HKU1), taxid:290028 (751 proteins)
+# Data2: transport proteins
 data_num_2 = df.loc[df['data'] == "transport"]
 data_num_2 = data_num_2.loc[data_num_2['length'] <= 1000]
 data_num_2 = data_num_2[~data_num_2.sequence.str.contains('X',case=False)]
 data_num_2.to_csv (dir_path+'Data2 - transport proteins [converted 30%].csv', index = None, header=True) # Don't forget to add '.csv' at the end of the path
 
-# Data3: Human coronavirus NL63 (HCoV-NL63), taxid:277944 (1318 proteins)
+# Data3: membrane proteins
 data_num_3 = df.loc[df['data'] == "membrane"]
 data_num_3 = data_num_3.loc[data_num_3['length'] <= 1000]
 data_num_3 = data_num_3[~data_num_3.sequence.str.contains('X',case=False)]
