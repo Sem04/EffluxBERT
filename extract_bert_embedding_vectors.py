@@ -248,7 +248,7 @@ def calculate_cosine_distance_token_embeddings(df_feature_vectors, step_down_sli
     return df_distance_result_;     
 
 
-## Call function for example
+## An example
 #df_distance_result = calculate_cosine_distance_token_embeddings(df_input_feature_embedding_vectors, 7);
 ##df_distance_result
 
@@ -404,18 +404,11 @@ def generate_bert_output_embeddings_jsonl(df_data, bert_model_path, output_jsonl
 ## Store in dataframe
 #df_fasta_format = pd.DataFrame(get_array_fasta)     
 
-
 # Read CSV
 df_fasta_format = pd.read_csv("All protein sequence in the same format.csv")
 
 print("Total fasta input: ", len(df_fasta_format.index))
 print("Min len test: ", min(df_fasta_format['length'].tolist()))
-
-
-
-
-
-
 
 # Create output directory
 bert_output_path = "/home/yzu1607b/Semmy/Generate BERT/OUTPUT_BERT_PROFLES/";
@@ -424,8 +417,6 @@ if(path.exists(bert_output_path) == False):
 	os.mkdir(bert_output_path);
 else:
 	print("Directory is exist!!!");
-
-
 
 ###############################################################################
 # LOOP DATA FOR EACH PROTEIN sequence & BERT PATH SETTINGS

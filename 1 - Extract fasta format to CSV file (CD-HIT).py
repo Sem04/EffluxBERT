@@ -88,7 +88,7 @@ df = df.reset_index(drop=True)
 df = df.loc[df['length'] >= 50]
 #print(df.loc[df['length'] >= 50])
 
-# Data1: efflux
+# Data1: efflux proteins
 data_num_1 = df.loc[(df['data'] == 'mfs') | (df['data'] == 'smr') | (df['data'] == 'mate') | (df['data'] == 'rnd') | (df['data'] == 'abc')]
 data_num_1.to_csv (dir_path+'Data1 - efflux proteins [converted 30%].csv', index = None, header=True) # Don't forget to add '.csv' at the end of the path
 

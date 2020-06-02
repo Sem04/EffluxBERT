@@ -1,12 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import pandas as pd;
-
 from sklearn.utils import shuffle
 
 # READ ALL CSV AFTER USING CD-HIT
-
-# Seven human coronaviruses
 dir_path = "D:/LAB PROJECT/JOURNALS/15 - Efflux v2/DATA/2 - Remove similarity/";
 df_data3_1 = pd.read_csv(dir_path+"Data1 - efflux proteins [converted 30%].csv")
 df_data3_2 = pd.read_csv(dir_path+"Data2 - transport proteins [converted 30%].csv")

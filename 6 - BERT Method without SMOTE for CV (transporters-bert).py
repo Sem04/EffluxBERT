@@ -241,8 +241,7 @@ test_x = scale_features(test_x)
 #train_x, train_y = over_sample.fit_sample(train_x, train_y)
 #print('SMOTE: Resampled training dataset shape {}'.format(Counter(train_y)))
 
-
-# # Save Class 1 (EFFLUX VS TRANSPORTER)
+# # Save Class 2 (EFFLUX VS MEMBRANE)
 OUTPUT_DIR_TARGET = "D:/LAB PROJECT/JOURNALS/15 - Efflux v2/DATA/5 - BERT Features without SMOTE - CV/"+pretrained_bert+"/";
 path_train = OUTPUT_DIR_TARGET+"efflux_membrane_train.csv";
 path_test = OUTPUT_DIR_TARGET+"efflux_membrane_test.csv";
